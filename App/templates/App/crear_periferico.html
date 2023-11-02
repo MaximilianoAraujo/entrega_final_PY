@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block dynamic_title %}
+    Crear Periférico
+{% endblock dynamic_title %}
+
+
+{% block dynamic_h1 %}
+    Crear Periférico
+{% endblock dynamic_h1 %}   
+
+
+{% block dynamic_main %}
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <p>Datos del Periférico a crear</p>
+
+        {{formulario_periferico}}
+
+        <input type="submit" value="Crear">
+
+    </form>
+
+{% endblock dynamic_main %}

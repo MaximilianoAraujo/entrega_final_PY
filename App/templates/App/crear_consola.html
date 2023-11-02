@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block dynamic_title %}
+    Crear Consola
+{% endblock dynamic_title %}
+
+
+{% block dynamic_h1 %}
+    Crear Consola
+{% endblock dynamic_h1 %}   
+
+
+{% block dynamic_main %}
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <p>Datos de la Consola a crear</p>
+
+        {{formulario_consola}}
+
+        <input type="submit" value="Crear">
+
+    </form>
+
+{% endblock dynamic_main %}
