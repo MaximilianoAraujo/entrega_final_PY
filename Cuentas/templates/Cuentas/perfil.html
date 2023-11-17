@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block dynamic_title %}
+    Tu perfil
+{% endblock dynamic_title %}
+
+{% block dynamic_h1 %}
+    Tu perfil
+{% endblock dynamic_h1 %}   
+
+{% block dynamic_main %}
+        <ul>
+            <br>
+            <li><b>Usuario:</b> {{ user.username }}</li>
+            <li><b>Nombre real:</b> {{ user.first_name }}</li>
+            <li><b>Apellido :</b> {{ user.last_name }}</li>
+            <li><b>Email:</b> {{ user.email }}</li>
+            {% if mas_datos %}
+
+                {% if mas_datos.biografia %}
+                    <li><b>Biografía:</b> {{ mas_datos.biografia }}</li>
+                {% else %}
+                    <li><b>Biografía:</b> Incompleto. Añada esta información desde "Editar Perfil"</li>
+                {% endif %}
+
+                {% if mas_datos.avatar %}
+                    <li><b>Avatar:</b> <img src="{{ mas_datos.avatar.url }}" alt="Avatar" height="150px"></li>
+                {% else %}
+                    <li><b>Avatar:</b> No disponible. Añada esta información desde "Editar Perfil"</li>
+                {% endif %}
+
+            {% endif %}
+
+            <br>
+            <button type="button">
+                <a href={% url "editar_perfil" %}> Editar perfil </a>
+            </button>
+        </ul>
+
+{% endblock dynamic_main %}

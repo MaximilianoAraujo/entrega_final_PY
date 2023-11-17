@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block dynamic_title %}
+    EDITAR PERFIL
+{% endblock dynamic_title %}
+
+
+{% block dynamic_h1 %}
+    EDITAR PERFIL
+{% endblock dynamic_h1 %}   
+
+
+{% block dynamic_main %}
+    
+    <ul>
+        <br>
+        <button type="button">
+            <a href={% url "editar_password" %}>Editar Contraseña</a>
+        </button>
+        <br><br>
+        <form action={% url "perfil" %} method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+
+        <table>
+            {{formulario_editar}}
+        </table>
+
+        <br>
+        <input type="submit" value="Confirmar">
+
+        </form>
+    </ul>
+
+{% endblock dynamic_main %}

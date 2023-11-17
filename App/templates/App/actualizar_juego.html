@@ -2,32 +2,31 @@
 
 
 {% block dynamic_title %}
-    Crear Juego
+    Editar Información
 {% endblock dynamic_title %}
 
 
 {% block dynamic_h1 %}
-    Crear Juego
+    Editar Información
 {% endblock dynamic_h1 %}   
 
 
 {% block dynamic_main %}
     
-    <ul>   
+    <ul>
         <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
-        <h3><b>Ingrese los datos del juego a crear</b></h3>
+        <h3><b>Información a editar</b></h3>
 
         <table>
-            {{formulario_juego.media}}
-            {{formulario_juego}}
+            {{formulario_actualizar.media}}
+            {{formulario_actualizar}}
         </table>
-        
 
-        <input type="submit" value="Crear">
+        <input type="submit" value="Editar">
 
-    </form>
+        </form>
     </ul>
 
 {% endblock dynamic_main %}

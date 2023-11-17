@@ -2,28 +2,30 @@
 
 
 {% block dynamic_title %}
-    Crear Consola
+    REGISTRO
 {% endblock dynamic_title %}
 
 
 {% block dynamic_h1 %}
-    Crear Consola
+    REGISTRO
 {% endblock dynamic_h1 %}   
 
 
 {% block dynamic_main %}
     
-    <form action="" method="POST">
+    <ul>
+        <br>
+        <form action={% url "registro" %} method="POST">
         {% csrf_token %}
 
-        <h3><b>Datos de la Consola a crear</b></h3>
-
         <table>
-            {{formulario_consola}}
+            {{formulario_registro}}
         </table>
 
-        <input type="submit" value="Crear">
+        <br>
+        <input type="submit" value="Registrarse">
 
-    </form>
+        </form>
+    </ul>
 
 {% endblock dynamic_main %}

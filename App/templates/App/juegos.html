@@ -13,21 +13,52 @@
 
 {% block dynamic_main %}
 
-    <form action="">
-        <input type="text" name='nombre' placeholder= 'Nombre del juego'>
-        <input type="submit" value='Buscar'>
-    </form>
+    <ul>
+        <br>
+        <button type="button">
+            <a href={% url "crear_juego" %}> Crear Nuevo Juego </a>
+        </button>
+        <br><br>
+        <form action="">
+            <input type="text" name='nombre' placeholder= 'Juego a Buscar'>
+            <input type="submit" value='Buscar'>
+        </form>
+        <br><br>
+        <h2>Listado de Juegos</h2>
+    </ul>
 
     {% if lista_juegos%}
     <ul>
+        <p>--------------------------------------------------------------------------------------</p>
+
         {% for juego in lista_juegos %}
 
-        <li>{{juego}}</li>
+        <li>
+        
+            <h5><b>Nombre:</b> {{juego.nombre}} | <b>Género:</b> {{juego.genero}} <br><br></h5>
+
+            <button type="button">
+                <a href={% url "detalle_juego" juego.id %}> Detalles </a>
+            </button>
+
+            <button type="button">
+                <a href={% url "actualizar_juego" juego.id %}> Editar Información </a>
+            </button>
+            
+            <button type="button">
+                <a href={% url "eliminar_juego" juego.id %}> Eliminar </a>
+            </button>
+
+            <br><br>
+
+            <p>--------------------------------------------------------------------------------------</p>
+        
+        </li>
 
         {% endfor %}
     </ul>
     {% else %}
-        <h3>No se encontro el juego especificado</h3>
+        <h5>No se encontraron resultados.</h5>
     {% endif%}
 
 

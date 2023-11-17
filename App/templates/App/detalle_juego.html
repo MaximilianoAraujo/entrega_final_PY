@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block dynamic_title %}
+    Detalles
+{% endblock dynamic_title %}
+
+
+{% block dynamic_h1 %}
+    Detalles de {{juego.nombre}}
+{% endblock dynamic_h1 %}   
+
+
+{% block dynamic_main %}
+
+    <ul>
+        <li><b>Nombre del Juego</b>: {{juego.nombre}}</li><br>
+        {% if juego.portada %}
+            <li><b>Imagen de Portada</b>:<img src="{{ juego.portada.url }}" alt="Portada del Juego" height = "150px"></li>
+        {% else %}
+            <p> No hay una imagen disponible </p>
+        {% endif %}
+        <br><br>
+        <li><b>Descripción</b>: {{juego.descripcion | safe}}</li><br>
+        <li><b>Género</b>: {{juego.genero}}</li><br>
+        <li><b>Precio</b>: ${{juego.precio}}</li><br>
+        <li><b>Fecha de Lanzamiento</b>: {{juego.fecha_lanzamiento}}</li><br>
+    </ul>
+
+{% endblock dynamic_main %}
