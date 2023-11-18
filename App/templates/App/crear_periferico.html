@@ -13,17 +13,24 @@
 
 {% block dynamic_main %}
     
-    <form action="" method="POST">
-        {% csrf_token %}
+    <ul>
+        <br>
+        <form action="" method="POST">
+            {% csrf_token %}
 
-        <p>Datos del Periférico a crear</p>
+            <h3><b>Datos del Periférico a crear</b></h3>
 
-        <table>
-            {{formulario_periferico}}
-        </table>
+            <br>
+            <table>
+                {{formulario_periferico}}
+            </table>
 
-        <input type="submit" value="Crear">
+            <br>
+            <input type="submit" value="Crear Periférico">
 
-    </form>
+        </form>
+
+
+    </ul>
 
 {% endblock dynamic_main %}

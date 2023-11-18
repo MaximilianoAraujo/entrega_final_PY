@@ -12,15 +12,26 @@
         <ul>
             <br>
             <li><b>Usuario:</b> {{ user.username }}</li>
-            <li><b>Nombre real:</b> {{ user.first_name }}</li>
-            <li><b>Apellido :</b> {{ user.last_name }}</li>
             <li><b>Email:</b> {{ user.email }}</li>
-            {% if mas_datos %}
 
+            {% if user.first_name %}
+                <li><b>Nombre real:</b> {{ user.first_name }}</li>
+            {% else %}
+                <li><b>Nombre real:</b> Dato Incompleto. Añada esta información desde "Editar Perfil"</li>
+            {% endif %}
+
+            {% if user.last_name %}
+                <li><b>Apellido:</b> {{ user.last_name }}</li>
+            {% else %}
+                <li><b>Apellido:</b> Dato Incompleto. Añada esta información desde "Editar Perfil"</li>
+            {% endif %}
+
+            {% if mas_datos %}
+            
                 {% if mas_datos.biografia %}
                     <li><b>Biografía:</b> {{ mas_datos.biografia }}</li>
                 {% else %}
-                    <li><b>Biografía:</b> Incompleto. Añada esta información desde "Editar Perfil"</li>
+                    <li><b>Biografía:</b> Dato Incompleto. Añada esta información desde "Editar Perfil"</li>
                 {% endif %}
 
                 {% if mas_datos.avatar %}

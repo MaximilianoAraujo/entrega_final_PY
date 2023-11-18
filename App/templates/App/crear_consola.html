@@ -13,17 +13,23 @@
 
 {% block dynamic_main %}
     
-    <form action="" method="POST">
-        {% csrf_token %}
+    <ul>
+        <br>
+        <form action="" method="POST">
+            {% csrf_token %}
 
-        <h3><b>Datos de la Consola a crear</b></h3>
+            <h3><b>Datos de la Consola a crear</b></h3>
 
-        <table>
-            {{formulario_consola}}
-        </table>
+            <br>
+            <table>
+                {{formulario_consola}}
+            </table>
 
-        <input type="submit" value="Crear">
+            <br>
+            <input type="submit" value="Crear Consola">
 
-    </form>
+            </form>
+
+    </ul>
 
 {% endblock dynamic_main %}

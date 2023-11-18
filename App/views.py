@@ -103,8 +103,8 @@ def crear_consola(request):
     return render(request,'App/crear_consola.html', {'formulario_consola': formulario_consola})
 
 
+@login_required
 def crear_periferico(request):
-
     if request.method == 'POST':
         formulario_periferico = CrearPerifericoForm(request.POST)
 
