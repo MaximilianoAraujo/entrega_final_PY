@@ -14,7 +14,7 @@ El objetivo principal de este proyecto es proporcionar una herramienta versátil
 
 Clonar el Repositorio:
 
-* git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+* git clone https://github.com/MaximilianoAraujo/entrega_final_PY.git
   
  Instalar Dependencias:
 
