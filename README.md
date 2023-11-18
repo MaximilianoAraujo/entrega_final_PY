@@ -11,25 +11,26 @@ El objetivo principal de este proyecto es proporcionar una herramienta versátil
 * Eliminar: Proporciona la capacidad de eliminar juegos de forma segura.
 
 ## Instalación
-*Clonar el Repositorio:
 
-** git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+Clonar el Repositorio:
+
+* git clone https://github.com/tu-usuario/nombre-del-repositorio.git
   
-* Instalar Dependencias:
+ Instalar Dependencias:
 
-** pip install -r requirements.txt
+* pip install -r requirements.txt
 
-* Migraciones de Base de Datos:
+ Migraciones de Base de Datos:
 
-** python manage.py migrate
+* python manage.py migrate
 
-* Crear Superusuario:
+ Crear Superusuario:
 
-** python manage.py createsuperuser
+* python manage.py createsuperuser
 
-* Iniciar el Servidor:
+ Iniciar el Servidor:
 
-** python manage.py runserver
+* python manage.py runserver
 
 Visita http://127.0.0.1:8000/ para acceder a la aplicación.
 
