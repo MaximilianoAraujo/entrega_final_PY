@@ -10,6 +10,8 @@ El objetivo principal de este proyecto es proporcionar una herramienta versátil
 
 * Eliminar: Proporciona la capacidad de eliminar juegos de forma segura.
 
+* Se puede ver el funcionamiento del sitio en este video: https://drive.google.com/file/d/1YVMQZ2hE-8trjNTr89eQlyxR5t1KKCAu/view?usp=drive_link
+
 ## Instalación
 
 Clonar el Repositorio:
